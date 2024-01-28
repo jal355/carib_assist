@@ -3,7 +3,7 @@ import os
 import requests
 from playsound import playsound
 #NOTE: HIDE THIS BEFORE PUBLISHING CODE
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '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'
 
 from openai import OpenAI
 client = OpenAI()
