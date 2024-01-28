@@ -1,7 +1,7 @@
 
 import os 
 #NOTE: HIDE THIS BEFORE PUBLISHING CODE
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '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'
 
 from openai import OpenAI
 client = OpenAI()
@@ -26,7 +26,7 @@ def translate_creole_to_english(creole_phrase):
         
         # Correctly accessing the response
         translated_text = response.choices[0].message.content
-        # print(f"~~~~going through translator~ : {translated_text}~~~~~~\n~~~~~~")
+        print(f"~~~~going through translator~ : {translated_text}~~~~~~\n~~~~~~")
         return translated_text
     except Exception as e:
         print(f"An error occurred: {e}")

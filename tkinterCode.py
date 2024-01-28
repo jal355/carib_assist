@@ -27,4 +27,3 @@ button = customtkinter.CTkButton(app, text="Click to Start", command=button_clic
 button.place(relx=0.50, rely=0.50, anchor="center")
 
 app.mainloop()
-

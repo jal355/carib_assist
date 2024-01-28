@@ -1,15 +1,18 @@
 import json
+from utilities.speech_tools import speak, record_audio, input_from_voice
+
 
 def get_user_details():
-    print("Welcome to Vivian, your personal assistant!\n")
-    print("To get started, I'll need to know a bit more about you.")
+
+    speak("Welcome to Vivian, your personal assistant!\n")
+    speak("To get started, I'll need to know a bit more about you.")
     
-    name = input("What is your name? ")
-    location = input("What is your current location? (City, Country): ")
-    preferences = input("What are some of your interests or preferences? (e.g., hobbies, food, music genres): ")
-    dietary_restrictions = input("Do you have any dietary restrictions? (e.g., vegetarian, gluten-free): ")
+    name = input_from_voice("What is your name?", duration=5)
+    location = input_from_voice("What is your current location? (City, Country): ")
+    preferences = input_from_voice("What are some of your interests or preferences? (For example: hobbies, food, music genres): ")
+    dietary_restrictions = input_from_voice("Do you have any dietary restrictions? (Such as vegetarian or gluten-free): ")
     
-    print("\nThank you! Now I can tailor my responses to suit your needs better.")
+    speak("\nThank you! Now I can tailor my responses to suit your needs better.")
 
     userDetailsDict = {
         "is_new_user" : True,
@@ -32,5 +35,3 @@ def load_user_details():
             return json.load(file)
     except FileNotFoundError:
         return None
-
-
